@@ -22,3 +22,5 @@ There is no settings page.
 
 = 0.1 =
 * Initial commit. First version of plugin.
+= 0.2 = 
+* Adding the legacy as a mail header.
