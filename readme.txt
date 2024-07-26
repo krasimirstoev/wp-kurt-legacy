@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Kurt Vonnegut HTTP header ===
 Contributors: krasimirstoev
 Tags: kurt vonnegut, http, headers
 Requires at least: 2.8
