@@ -3,7 +3,7 @@ Contributors: krasimirstoev
 Tags: kurt vonnegut, http, headers
 Requires at least: 2.8
 Tested up to: 6.6.1
-Stable tag: 0.2
+Stable tag: 0.2.1
 License: GPLv3
 
 Add an X-Kurt-Legacy header.
@@ -27,3 +27,5 @@ There is no settings page.
 * Adding the legacy as a mail header.
 = 0.2.1 =
 * A few improvements: prevent direct access to the plugin file, clear and consistent PHPDoc comments for each function and implified the logic for handling mail headers to ensure the header always added correctly.
+= 0.3 =
+* Added enhanced error logging to track HTTP header, meta tag, and email header additions.
