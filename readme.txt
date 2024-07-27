@@ -25,3 +25,5 @@ There is no settings page.
 * Initial commit. First version of plugin.
 = 0.2 = 
 * Adding the legacy as a mail header.
+= 0.2.1 =
+* A few improvements: prevent direct access to the plugin file, clear and consistent PHPDoc comments for each function and implified the logic for handling mail headers to ensure the header always added correctly.
