@@ -3,6 +3,7 @@ Contributors: krasimirstoev
 Tags: kurt vonnegut, http, headers
 Requires at least: 2.8
 Tested up to: 6.6.1
+Stable tag: 0.2
 License: GPLv3
 
 Add an X-Kurt-Legacy header.
