@@ -2,7 +2,7 @@
 Contributors: krasimirstoev
 Tags: kurt vonnegut, http, headers
 Requires at least: 2.8
-Tested up to: 6.7
+Tested up to: 7.1
 Stable tag: 0.3
 License: GPLv3
 
