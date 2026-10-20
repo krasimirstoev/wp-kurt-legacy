@@ -3,7 +3,7 @@ Contributors: krasimirstoev
 Tags: kurt vonnegut, http, headers
 Requires at least: 2.8
 Tested up to: 7.1
-Stable tag: 0.3
+Stable tag: 0.4
 License: GPLv3
 
 Add an X-Kurt-Legacy header.
@@ -20,6 +20,9 @@ This plugin just adds additional http header to pages.
 There is no settings page.
 
 == Changelog ==
+
+= 0.4 =
+* Prevent potential PHP 8+ errors from undefined WordPress debug constants and log messages only when debug logging is enabled.
 
 = 0.1 =
 * Initial commit. First version of plugin.
