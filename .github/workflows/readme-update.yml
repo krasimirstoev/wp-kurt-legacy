@@ -1,0 +1,29 @@
+name: Update WordPress.org readme
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - readme.txt
+
+permissions:
+  contents: read
+
+jobs:
+  update-readme:
+    name: Publish readme.txt without a new plugin release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Update readme on WordPress.org
+        uses: 10up/action-wordpress-plugin-asset-update@stable
+        env:
+          SVN_USERNAME: krasimirstoev
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SLUG: kurt-vonnegut-http-header
+          SKIP_ASSETS: 'true'
+          IGNORE_OTHER_FILES: 'true'
