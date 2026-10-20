@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Kurt Vonnegut HTTP Header
  * Plugin URI: https://stenata.org/wp-kurt-legacy/
- * Version: 0.3
+ * Version: 0.4
  * Description: Adds an X-Kurt-Legacy HTTP header
  * Author: Krasimir Stoev
  * Author URI: https://stenata.org
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @param string $message The error message to log.
  */
 function kurt_legacy_log_error( $message ) {
-    if ( WP_DEBUG_LOG ) {
+    if ( defined( 'WP_DEBUG' ) && WP_DEBUG && defined( 'WP_DEBUG_LOG' ) && WP_DEBUG_LOG ) {
         error_log( '[Kurt Vonnegut HTTP Header] ' . $message );
     }
 }
