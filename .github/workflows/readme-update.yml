@@ -18,8 +18,22 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detect a new plugin version
+        id: release-check
+        env:
+          PREVIOUS_SHA: ${{ github.event.before }}
+        shell: bash
+        run: |
+          if git diff --unified=0 "$PREVIOUS_SHA" HEAD -- readme.txt | grep -Eq '^\+Stable tag:'; then
+            echo "skip_readme_update=true" >> "$GITHUB_OUTPUT"
+            echo "Stable tag changed; the tagged release will publish this readme."
+          fi
 
       - name: Update readme on WordPress.org
+        if: steps.release-check.outputs.skip_readme_update != 'true'
         uses: 10up/action-wordpress-plugin-asset-update@stable
         env:
           SVN_USERNAME: krasimirstoev
